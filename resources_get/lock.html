@@ -1,0 +1,28 @@
+$def with (abc)
+$    member = abc[0]
+$    title = abc[1]
+$    count = abc[2]
+<html>
+        <STYLE TYPE="text/css">
+<!--
+BODY {
+background-attachment: fixed;
+background-image: url(https://img1.baidu.com/it/u=2639622643,2642612956&fm=26&fmt=auto&gp=0.jpg);
+background-size:100% 100%;}
+-->
+</STYLE>
+        	<head>
+        		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        		<title>健康知识问答系统</title>
+        	</head>
+        	<body>
+                        <a href="/home"><h2>返回首页</h2></a><br><br>
+                <form action="/delete" method="POST" accept-charset="ASCII">
+                <h2>是否需要删除</h2>
+                    <input type="hidden" name="question" value="$member" readonly>
+                    <input type="submit" value="删除" style="height:50px;width:100px;font-size:35px;vertical-align:top;">
+        		<h1>搜索结果如下</h1>
+        		<h2><div align="center"><p border-color: blue; border-style: double; borde-width:2;>$title</p></div></h2>
+        		$count
+        	</body>
+        </html>

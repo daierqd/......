@@ -1,0 +1,31 @@
+$def with (kk)
+<html>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<STYLE TYPE="text/css">
+    <!--
+    BODY {
+    background-attachment: fixed;
+    background-image: url(https://img1.baidu.com/it/u=2639622643,2642612956&fm=26&fmt=auto&gp=0.jpg);
+    background-size:100% 100%;}
+-->
+</STYLE>
+        	<head>
+        		<title>健康知识问答系统</title>
+        	</head>
+        	<body text="#008080">
+        		<br>
+        		<a href="/home"><h2>返回首页</h2></a>
+        		<div align="center"><font size="+6" face="楷体"><strong>您已获得管理员权限，请小心操作数据！</strong></font></div><br><br><br>
+        <h3>此处添加题库</h3>
+	    <form action="/add" method="POST" accept-charset="ASCII">
+			    标题:<input type="text" name="question" value=""/><br>内容:<input type="text" name="count" value=""/><br><input type="submit" value="添加"><br>
+	    </form>
+				$for i in range(len(kk)):
+					<a href="/lock/$i"><h2>$kk[i]</h2></a>
+				<br><br>
+        		<hr size ="5" noshade>
+        		<ul type="square">
+        			<li><a href="/home"><h2>返回首页</h2></a></li><br><br>
+        		</ul>
+        	</body>
+        </html>
